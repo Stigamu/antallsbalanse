@@ -2,7 +2,7 @@
 window.STARTDATA = {
   lokalitet: "", generasjon: "", dato: "",
   mottakerTlf: "", mottakerEpost: "",
-  ib: { utsett: 1088440 },
-  produksjon: { dode: 442898, destruert: 69, avlivetProve: 32, flyttetUt: 0, slakt: 686188, romming: 0,
-                antallsavvik: -41412, uspesAvvik: 665, ub: 0 }
+  ib: { utsett: 0 },
+  produksjon: { dode: 0, destruert: 0, avlivetProve: 0, flyttetUt: 0, slakt: 0, romming: 0,
+                antallsavvik: 0, uspesAvvik: 0, ub: 0 }
 };
