@@ -1,0 +1,37 @@
+:root{--navy:#17324D;--light:#E8EFF5;--mid:#D5E2EE;--yellow:#FFFF00;--red:#FF0000}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Aptos","Segoe UI",Arial,sans-serif;color:#222;min-height:100vh;
+  background:linear-gradient(rgba(10,30,50,.35),rgba(10,30,50,.5)),url("bilder/bakgrunn.jpg") center/cover fixed,#1d4560}
+header{background:rgba(23,50,77,.9);color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:100px;backdrop-filter:blur(3px)}
+header h1{margin:0;font-size:28px;letter-spacing:1px}
+.sub{margin:4px 0 0;opacity:.85;font-size:14px}
+#laks{height:100px;max-width:40vw;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5));transform:rotate(-8deg);animation:svom 4s ease-in-out infinite}
+@keyframes svom{50%{transform:rotate(-4deg) translateY(-4px)}}
+main{max-width:1000px;margin:0 auto;padding:20px}
+.card{background:rgba(255,255,255,.94);border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.3);padding:16px;display:flex;flex-direction:column}
+.meta{flex-direction:row;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.meta label,.sendgrid label{display:flex;flex-direction:column;font-size:13px;color:var(--navy);font-weight:600;flex:1;min-width:180px}
+.meta input,.sendgrid input{margin-top:4px;padding:8px;border:1px solid #bbb;border-radius:4px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+h2{margin:-16px -16px 12px;padding:10px 16px;background:var(--navy);color:#fff;font-size:15px;border-radius:8px 8px 0 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 8px;background:var(--light);margin-bottom:4px;border-radius:4px;color:var(--navy)}
+.row small{display:block;font-size:11px;font-style:italic;opacity:.75}
+.row input{width:140px;flex-shrink:0;text-align:right;font-weight:700;font-size:15px;background:var(--yellow);border:1px solid #999;padding:6px;border-radius:3px}
+.row.sum{background:var(--mid);font-weight:700;margin-top:auto}
+.info{font-size:12px;font-style:italic;color:#333;text-align:center;margin:14px 6px 14px}
+.info p{margin:0 0 10px}
+output{font-weight:700;font-variant-numeric:tabular-nums}
+.note{font-size:12px;font-style:italic;color:#555;margin:4px 0 8px;text-align:center}
+.note.light{color:#fff;text-shadow:0 1px 3px #000}
+.result{margin-top:16px}
+.balanse{background:var(--navy);color:#fff;border-radius:8px;padding:16px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:24px;font-weight:700;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.balanse output{font-size:32px}
+.balanse small{width:100%;font-size:14px;margin-top:6px}
+.balanse.ok{border-left:10px solid #3CCB5A}.balanse.feil{border-left:10px solid #FF4D4D}
+.send{margin-top:16px}.sendgrid{display:flex;gap:16px;flex-wrap:wrap}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{background:var(--navy);color:#fff;border:0;padding:12px 18px;border-radius:5px;cursor:pointer;font-size:15px;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+#btnSms{background:#1E7B34}#btnMail{background:#0F6CBD}
+button.sec{background:#A4262C}button:hover{opacity:.9}
+.center{text-align:center}
+@media(max-width:700px){#laks{height:64px}header h1{font-size:22px}body{background-attachment:scroll}}

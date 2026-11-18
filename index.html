@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biomassebalanse – Antallsregnskap</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>ANTALLSREGNSKAP</h1>
+    <p class="sub">Biomassebalanse – fyll ut de gule feltene. Øvrige felt beregnes automatisk.</p>
+  </div>
+  <img id="laks" src="bilder/laks.svg" alt="Oppdrettslaks">
+</header>
+<main>
+  <section class="meta card">
+    <label>Lokalitet <input id="lokalitet" type="text"></label>
+    <label>Generasjon / merd <input id="generasjon" type="text"></label>
+    <label>Dato <input id="dato" type="date"></label>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>IB</h2>
+      <div class="row"><span>Utsett</span><input class="inp" data-k="ib.utsett" inputmode="numeric"></div>
+      <div class="info">
+        <p><strong>Slakteavvik</strong> tas ikke med i balansen, denne er med i antallsavviket.</p>
+        <p><strong>Antallsavvik og uspesifisert avvik:</strong> Sett motsatt fortegn av det som står i FT. Hvis minus, sett positivt – hvis positivt, sett minus foran.</p>
+      </div>
+      <div class="row sum"><span>Sum IB</span><output id="sumIb"></output></div>
+    </section>
+
+    <section class="card">
+      <h2>PRODUKSJONSDATA</h2>
+      <div class="row"><span>Døde</span><input class="inp" data-k="produksjon.dode" inputmode="numeric"></div>
+      <div class="row"><span>Destruert</span><input class="inp" data-k="produksjon.destruert" inputmode="numeric"></div>
+      <div class="row"><span>Avlivet prøve</span><input class="inp" data-k="produksjon.avlivetProve" inputmode="numeric"></div>
+      <div class="row"><span>Flyttet ut</span><input class="inp" data-k="produksjon.flyttetUt" inputmode="numeric"></div>
+      <div class="row"><span>Slakt</span><input class="inp" data-k="produksjon.slakt" inputmode="numeric"></div>
+      <div class="row"><span>Rømming</span><input class="inp" data-k="produksjon.romming" inputmode="numeric"></div>
+      <div class="row"><span>Antallsavvik <small>(motsatt fortegn av FT)</small></span><input class="inp" data-k="produksjon.antallsavvik" inputmode="text"></div>
+      <div class="row"><span>Uspes. avvik i perioden <small>(motsatt fortegn av FT)</small></span><input class="inp" data-k="produksjon.uspesAvvik" inputmode="text"></div>
+      <div class="row"><span>UB (hvis fisk igjen på lok.)</span><input class="inp" data-k="produksjon.ub" inputmode="numeric"></div>
+      <div class="row sum"><span>Sum produksjonsdata</span><output id="sumProd"></output></div>
+    </section>
+  </div>
+
+  <section class="result">
+    <div id="balanseBox" class="balanse"><span>BALANSE</span><output id="balanse"></output><small id="status"></small></div>
+  </section>
+
+  <section class="send card">
+    <h2>SEND RAPPORT</h2>
+    <div class="sendgrid">
+      <label>Mottaker mobil <input id="mottakerTlf" type="tel" inputmode="tel"></label>
+      <label>Mottaker e-post <input id="mottakerEpost" type="email"></label>
+    </div>
+  </section>
+
+  <section class="actions">
+    <button id="btnSms">📱 Send som SMS</button>
+    <button id="btnMail">✉️ Send på mail</button>
+    <button id="btnSlett" class="sec">🗑️ Slett innhold i gule bokser</button>
+  </section>
+  <p class="note center light">Fyll ut de gule boksene. Data lagres lokalt i nettleseren din (ingen server).</p>
+</main>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
